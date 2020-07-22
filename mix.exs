@@ -42,7 +42,12 @@ defmodule B2w.MixProject do
       {:telemetry_poller, "~> 0.4"},
       {:jason, "~> 1.0"},
       {:plug_cowboy, "~> 2.0"},
-      {:mongodb_ecto, github: "michalmuskala/mongodb_ecto"}
+      {:mongodb_ecto, github: "michalmuskala/mongodb_ecto"},
+      {:sendgrid, "~> 2.0"},
+      {:swoosh, "~> 1.0"},
+      {:gen_smtp, "~> 0.13"},
+      {:hackney, "~> 1.16"},
+      {:file_system, "~> 0.2"}
     ]
   end
 

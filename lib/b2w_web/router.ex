@@ -5,7 +5,7 @@ defmodule B2wWeb.Router do
     plug :accepts, ["html"]
     plug :fetch_session
     plug :fetch_flash
-    plug :protect_from_forgery
+    # plug :protect_from_forgery
     plug :put_secure_browser_headers
   end
 
@@ -18,6 +18,7 @@ defmodule B2wWeb.Router do
 
     get "/", PageController, :index
     resources "/produtos", ProductController
+    post "/email", ReportController, :send_email
   end
 
   # Other scopes may use custom stacks.

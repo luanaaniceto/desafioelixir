@@ -28,6 +28,10 @@ config :logger, :console,
 # Use Jason for JSON parsing in Phoenix
 config :phoenix, :json_library, Jason
 
+config :b2w, B2wWeb.Mailer,
+  adapter: Swoosh.Adapters.Sendgrid,
+  api_key: "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"
+
 # Import environment specific config. This must remain at the bottom
 # of this file so it overrides the configuration defined above.
 import_config "#{Mix.env()}.exs"
